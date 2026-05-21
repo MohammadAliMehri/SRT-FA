@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SrtFa | مترجم زیرنویس</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="glass-card">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-language"></i>
+                    <h1>SrtFa</h1>
+                </div>
+                <p class="subtitle">ترجمه زیرنویس فیلم با Google Translator</p>
+            </header>
+
+            <main>
+                <form id="uploadForm">
+
+                    <div class="drop-zone" id="dropZone">
+                        <input type="file" name="srt" id="fileInput" accept=".srt" hidden>
+                        <div class="drop-content">
+                            <i class="fa-solid fa-cloud-arrow-up cloud-icon"></i>
+                            <h3>فایل زیرنویس را اینجا رها کنید</h3>
+                            <p>یا برای انتخاب کلیک کنید</p>
+                            <span class="file-support">پشتیبانی از فرمت .SRT</span>
+                        </div>
+                        <div class="file-info" id="fileInfo" style="display: none;">
+                            <i class="fa-regular fa-file-lines file-icon"></i>
+                            <div class="file-details">
+                                <span id="fileName">movie.srt</span>
+                                <span id="fileSize">0 KB</span>
+                            </div>
+                            <button type="button" id="removeFile" class="remove-btn"><i
+                                    class="fa-solid fa-xmark"></i></button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="cta-btn" id="submitBtn" disabled>
+                        <span class="btn-text">شروع ترجمه</span>
+                        <div class="loading-spinner"></div>
+                    </button>
+                </form>
+
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress-header">
+                        <span id="statusText">در حال آماده‌سازی...</span>
+                        <span id="percentage">0%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="progressBar"></div>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <p>قدرت گرفته از <a href="#" target="_blank">Google Translator</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
