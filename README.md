@@ -54,7 +54,7 @@ srt_fa/
 
 ```bash
 git clone https://github.com/MohammadAliMehri/SRT-FA.git
-cd srt_fa
+cd SRT-FA
 pip install -r requirements.txt
 ```
 
